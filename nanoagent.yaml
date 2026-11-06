@@ -1,0 +1,24 @@
+_ > nanoagent.plugin.v0001.ManifestConfig:
+id: pt-news-asof
+name: PersonalTrader News As Of
+version: 0.1.0
+status: in-development
+spec: nanoagent.plugin/v0001
+runtime > nanoagent.plugin.v0001.RuntimeConfig:
+  type: mcp_stdio
+  command: [uv, run, --frozen, python, -m, plugin]
+permissions > nanoagent.plugin.v0001.PermissionsConfig:
+  network > nanoagent.plugin.v0001.NetworkConfig:
+    hosts: []
+  filesystem > nanoagent.plugin.v0001.FilesystemConfig:
+    write: [workspace]
+tools > dict[contract.Tool, nanoagent.plugin.v0001.ToolConfig]:
+  compute:
+    description: "Select available, recent, ticker-relevant news and remove syndication duplicates at a fixed decision timestamp."
+tasks > dict[contract.Task, nanoagent.plugin.v0001.TaskConfig]:
+  screen-news:
+    description: "Select available, recent, ticker-relevant news and remove syndication duplicates at a fixed decision timestamp."
+    runner: agent
+    tools: [compute]
+    reference: null
+    instructions: "Select available, recent, ticker-relevant news and remove syndication duplicates at a fixed decision timestamp. Return every output field. Supports timestamped news ingestion and prevents future-news leakage; does not extract EDGAR fields or judge sentiment."

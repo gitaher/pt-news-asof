@@ -1,0 +1,9 @@
+_ > nanoagent.plugin.v0001.ProductConfig:
+tagline: "Select available, recent, ticker-relevant news and remove syndication duplicates at a fixed decision timestamp."
+summary: "Supports timestamped news ingestion and prevents future-news leakage; does not extract EDGAR fields or judge sentiment."
+highlights:
+  - "Use a frozen input snapshot without a market-data account"
+  - "Check the answer with a deterministic executable verifier"
+steps:
+  - "Supply the typed input shown in the task documentation"
+  - "Run the task and inspect the verified result"

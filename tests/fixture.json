@@ -1,0 +1,62 @@
+{
+  "input": {
+    "articles": [
+      {
+        "id": "a",
+        "canonical_id": "g1",
+        "symbols": [
+          "AAPL"
+        ],
+        "published_at": "2026-01-05T10:00:00Z",
+        "available_at": "2026-01-05T10:01:00Z"
+      },
+      {
+        "id": "b",
+        "canonical_id": "g1",
+        "symbols": [
+          "AAPL"
+        ],
+        "published_at": "2026-01-05T10:00:00Z",
+        "available_at": "2026-01-05T10:02:00Z"
+      },
+      {
+        "id": "c",
+        "canonical_id": "g2",
+        "symbols": [
+          "AAPL"
+        ],
+        "published_at": "2026-01-05T11:00:00Z",
+        "available_at": "2026-01-05T13:00:00Z"
+      },
+      {
+        "id": "d",
+        "canonical_id": "g3",
+        "symbols": [
+          "MSFT"
+        ],
+        "published_at": "2026-01-05T09:00:00Z",
+        "available_at": "2026-01-05T09:01:00Z"
+      },
+      {
+        "id": "e",
+        "canonical_id": "g4",
+        "symbols": [
+          "AAPL"
+        ],
+        "published_at": "2026-01-04T12:00:00Z",
+        "available_at": "2026-01-04T12:00:00Z"
+      }
+    ],
+    "symbols": [
+      "AAPL"
+    ],
+    "cutoff": "2026-01-05T12:00:00Z",
+    "lookback_hours": 24
+  },
+  "gold": {
+    "selected_ids": [
+      "e",
+      "a"
+    ]
+  }
+}
